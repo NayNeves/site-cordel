@@ -1,0 +1,115 @@
+@charset "UTF-8";
+
+/*fontes externas*/
+@import url('https://fonts.googleapis.com/css2?family=Passion+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');
+
+/*sempre colocar as cores da paleta aqui na variável root, depois é so usar a cor. Colocar fontes também. ISSO AJUDA MTO, pois se trocar as cores, nao precisa ir em cada declaração, é so mexer no root!*/
+:root {
+    --cor0: black;
+    --cor1: #565C4F;
+    --cor2: #031402;
+
+    --fonte1: Verdana, Geneva, Tahoma, sans-serif;
+    --fonte2: 'Passion One', cursive;
+    --fonte3: 'Sriracha', cursive;
+}
+
+* {  /*configurações gerais, mto importante sempre pra zerar tudo!*/
+    padding: 0px;
+    margin: 0px;
+    font-size: 1em;
+}
+
+
+html, body { 
+    min-height: 100vh; /*tamanho minimo da view height*/
+    background-color: darkgray; 
+    font-family: var(--fonte1);
+}
+
+header {
+    background-color: black;
+    text-align: center;
+    color: white;
+    height: 280px;
+}
+
+header > h1 {
+    padding-top: 50px;
+    font-variant: small-caps; /*pra colocar letra maiuscula, mas com as primeiras maiores que o resto, melhor que text-transform.*/
+    font-family: var(--fonte2);
+    font-size: 10vw;  /*adaptar o tamanho da fonte a largura da tela. É em %. Melhor que em, pois se adapta em telas pequenas.*/
+}
+
+header > p {
+    padding-bottom: 50px;
+    font-family: var(--fonte1);
+}
+
+header a, footer a {
+    text-decoration: none; /*tirar o sublinhado do link*/
+    color: white;
+    font-weight: bolder;
+}
+
+header a:hover, footer a:hover { /*qdo passar o mouse em cima, fica sublinhado*/
+    text-decoration: underline;
+}
+
+section {
+    padding-top: 10vh;  /*espaçamento entre os paragrafos*/
+    padding-bottom: 10vh;
+    line-height: 2em; /*espaçamento duplo entre as linhas*/
+    padding-left: 30px; /*espaçamento na esquerda, para nao ficar grudado na grade.*/
+    font-family: var(--fonte3);
+    font-size: 3.5vw;
+}
+
+section > p {
+    padding-bottom: 2em;
+}
+
+section.normal {
+    background-color: white;
+    color: black;
+}
+
+section.imagem {
+    background-color: rgb(51, 51, 51);
+    color: white;
+    box-shadow: inset 6px 6px 13px 0px rgba(0, 0, 0, 0.473);
+    background-size: cover;
+    background-attachment: fixed; /*efeito paralax! deixa a imagem travada na tela.*/
+}
+
+section.imagem > p {
+    display: inline-block; /*ao inves de usar width, usamos o inline block, ai ele transforma de block para inline.*/
+    padding: 5px;
+    background-color: rgba(0, 0, 0, 0.514);
+    text-shadow: 1px 1px 0px black;
+} 
+
+section#img01 {
+    background-image: url('../images/background001.jpg');
+    background-position: right center;
+}
+
+section#img02 {
+    background-image: url('../images/background002.jpg');
+}
+
+footer {
+    background-color: black;
+    text-align: center;
+    color: white;
+    padding: 10px;
+}
+
+
+
+
+
+
+
+
